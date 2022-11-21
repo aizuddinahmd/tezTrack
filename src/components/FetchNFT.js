@@ -5,8 +5,8 @@ function FetchNFT({ wallet, nft, setNft }) {
     var requestOptions = {
       method: "GET",
     };
-    const baseURL = "https://api.ghostnet.tzkt.io/";
-    const fetchURL = `${baseURL}v1/tokens/balances?account=${wallet}&metadata.artifactUri.null=false`;
+    const baseURL = "https://api.mainnet.tzkt.io/";
+    const fetchURL = `${baseURL}v1/tokens/balances?account=${wallet}&token.metadata.artifactUri.null=false`;
     const nft = await fetch(fetchURL, requestOptions).then((data) =>
       data.json()
     );

@@ -1,6 +1,6 @@
 import React from "react";
 
-function WalletInput({ wallet, setWallet }) {
+function WalletInput({ wallet, setWallet, setNativeBalance }) {
   return (
     <div>
       <input
@@ -12,7 +12,6 @@ function WalletInput({ wallet, setWallet }) {
         placeholder="Add wallet address"
       />
       <br />
-      <button onClick={(e) => setWallet(e.target.value)}>Get Balance</button>
     </div>
   );
 }

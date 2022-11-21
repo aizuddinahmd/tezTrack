@@ -18,6 +18,7 @@ const App = () => {
     <div className="h-100">
       <div className="d-flex flex-column justify-content-center align-items-center h-50">
         <div className="py-1">
+          <p>tz1a1nqSAVrucurePA6iR5hHFXRjQEdG9RW5</p>
           <WalletInput wallet={wallet} setWallet={setWallet} />
           <Tabs
             defaultActiveKey="profile"

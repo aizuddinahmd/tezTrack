@@ -14,7 +14,17 @@ function FetchBalance({ wallet, nativeBalance, setNativeBalance }) {
     setNativeBalance(balance);
   };
 
-  return <div>{wallet ? fetchBalance() : null}</div>;
+  return (
+    <div>
+      <button onClick={fetchBalance}>Search</button>
+      <div>
+        <h1>Portfolio</h1>
+        <p>
+          Balance at {wallet} is {nativeBalance}XTZ
+        </p>
+      </div>
+    </div>
+  );
 }
 
 export default FetchBalance;

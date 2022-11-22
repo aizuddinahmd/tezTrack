@@ -23,6 +23,7 @@ function WalletInput() {
   return (
     <div>
       <input type={"text"} ref={inputRef} placeholder="Add wallet address" />
+      <br />
       <button onClick={handleClick}>Search</button>
 
       <Tabs

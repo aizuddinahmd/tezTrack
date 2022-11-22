@@ -22,34 +22,34 @@ function FetchDefi({ wallet, defiBalance, setDefiBalance }) {
 
   return (
     <div>
-      <p>DeFi Balance</p>
-      <Table>
-        <thead>
-          <tr>
-            <th>Currency</th>
-            <th>Balance</th>
-          </tr>
-        </thead>
-        <tbody>
-          {defiBalance.map((defi) => (
-            <tr key={defi.id}>
-              <td>
-                <img
-                  style={{ width: "50px", height: "50px" }}
-                  src={defi.token.metadata.thumbnailUri}
-                />
-              </td>
-              <td>{defi.token.metadata.name}</td>
-              <td>
-                {defi.balance}&nbsp;&nbsp;
-                {defi.token.metadata.symbol}
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </Table>
-
-      <Table />
+      {defiBalance.length > 1 && (
+        <div>
+          <p>Defi Balance</p>
+          <Table>
+            <thead>
+              <tr>
+                <th>Coin</th>
+                <th>Currency</th>
+                <th>Balance</th>
+              </tr>
+            </thead>
+            <tbody>
+              {defiBalance.map((defi) => (
+                <tr key={defi.id}>
+                  <td>
+                    <img style={{ width: "50px", height: "50px" }} />
+                  </td>
+                  <td>{defi.token.metadata.name}</td>
+                  <td>
+                    {defi.balance}&nbsp;&nbsp;
+                    {defi.token.metadata.symbol}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </Table>
+        </div>
+      )}
     </div>
   );
 }
